@@ -11,16 +11,20 @@ namespace Pizza
         {
             int T=int.Parse(Console.ReadLine());
             int[] N = new int[T];
-            for (int i = 0; i < T; i++)
+            if (1<=T && T<=1000000)
             {
-                N[i] = int.Parse(Console.ReadLine());
-                
+                for (int i = 0; i < T; i++)
+                {
+                    N[i] = int.Parse(Console.ReadLine());
+
+                }
+                for (int i = 0; i < T; i++)
+                {
+                    N[i] *= T;
+                    Console.WriteLine(N[i]);
+                }
             }
-            for (int i = 0; i < T; i++)
-            {
-                N[i] *= 2;
-                Console.WriteLine(N[i]);
-            }
+            
         }
 
     }
